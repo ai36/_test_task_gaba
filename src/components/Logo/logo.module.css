@@ -1,0 +1,20 @@
+.logo {
+  font-size: 48px;
+  line-height: 64px;
+  font-weight: 200;
+  white-space: nowrap;
+  color: var(--neutral-900);
+  text-decoration: none;
+  letter-spacing: -0.06em;
+  
+  @media (width < 768px) {
+    font-size: 0;
+  }
+
+  .highlight {
+    font-size: 50px;
+    color: var(--primary-500);
+    font-weight: 700;
+    letter-spacing: -0.21em;
+  }
+}

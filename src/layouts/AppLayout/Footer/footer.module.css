@@ -1,0 +1,14 @@
+.footer {
+  color: var(--neutral-400);
+  background-color: var(--neutral-800);
+  position: sticky;
+  bottom: 0;
+  font-size: 14px;
+  line-height: 16px;
+
+  .box {
+    display: flex;
+    align-items: center;
+    height: 64px;
+  }
+}

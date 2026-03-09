@@ -1,0 +1,44 @@
+.searchBox {
+  flex: 1;
+
+  .label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .input {
+      width: 100%;
+      padding: var(--spacing-sm) calc(4 * var(--spacing-xs));
+      padding-right: calc(11 * var(--spacing-xs));
+      border: var(--border) solid var(--neutral-200);
+      border-radius: var(--border-radius);
+      background-color: var(--neutral-100);
+      color: var(--neutral-800);
+    }
+  }
+
+  .icon {
+    position: absolute;
+    right: calc(1.5 * var(--spacing-sm));
+    width: 24px;
+    height: 24px;
+    color: var(--neutral-400);
+    pointer-events: none;
+  }
+
+  .iconBtn {
+    position: absolute;
+    right: calc(1.5 * var(--spacing-sm));
+    display: flex;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    .icon {
+      position: static;
+      pointer-events: auto;
+    }
+  }
+}

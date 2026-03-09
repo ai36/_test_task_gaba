@@ -1,0 +1,202 @@
+.card {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  border: var(--border) solid var(--neutral-200);
+  border-radius: var(--border-radius);
+  background-color: var(--neutral-0);
+  background-image: radial-gradient(
+    at 0 0,
+    var(--neutral-0) 50%,
+    color-mix(in srgb, var(--neutral-100) 50%, transparent) 90%,
+    var(--neutral-100)
+  );
+
+  .avatar {
+    flex-shrink: 0;
+
+    img {
+      display: block;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    min-width: 0;
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+
+      .name {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--neutral-900);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .role {
+        flex-shrink: 0;
+        padding: 2px var(--spacing-sm);
+        border-radius: 1in;
+        background-color: var(--primary-100);
+        color: var(--primary-600);
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+
+    .title {
+      margin: 0;
+      font-size: 14px;
+      color: var(--neutral-700);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .company {
+      margin: 0;
+      font-size: 14px;
+      color: var(--neutral-500);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin: var(--spacing-xs) 0 0;
+
+      .contact {
+        font-size: 14px;
+        color: var(--neutral-600);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &.skeleton {
+    background-image: none;
+
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(
+        90deg,
+        var(--neutral-200) 25%,
+        var(--neutral-100) 50%,
+        var(--neutral-200) 75%
+      );
+      background-size: 200% 100%;
+      animation: shimmer var(--skeleton-duration) infinite linear;
+    }
+
+    .body {
+      flex: 1;
+      gap: var(--spacing-xs);
+
+      .header {
+        .name {
+          width: 105px;
+          height: 24px;
+          border-radius: 4px;
+          background: linear-gradient(
+            90deg,
+            var(--neutral-200) 25%,
+            var(--neutral-100) 50%,
+            var(--neutral-200) 75%
+          );
+          background-size: 200% 100%;
+          animation: shimmer var(--skeleton-duration) infinite linear;
+        }
+
+        .role {
+          width: 52px;
+          height: 24px;
+          background: linear-gradient(
+            90deg,
+            var(--neutral-200) 25%,
+            var(--neutral-100) 50%,
+            var(--neutral-200) 75%
+          );
+          background-size: 200% 100%;
+          animation: shimmer var(--skeleton-duration) infinite linear;
+        }
+      }
+
+      .title {
+        width: 80%;
+        height: 21px;
+        border-radius: 4px;
+        background: linear-gradient(
+          90deg,
+          var(--neutral-200) 25%,
+          var(--neutral-100) 50%,
+          var(--neutral-200) 75%
+        );
+        background-size: 200% 100%;
+        animation: shimmer var(--skeleton-duration) infinite linear;
+      }
+
+      .company {
+        width: 60%;
+        height: 21px;
+        border-radius: 4px;
+        background: linear-gradient(
+          90deg,
+          var(--neutral-200) 25%,
+          var(--neutral-100) 50%,
+          var(--neutral-200) 75%
+        );
+        background-size: 200% 100%;
+        animation: shimmer var(--skeleton-duration) infinite linear;
+      }
+
+      .contacts {
+        .contact {
+          width: 70%;
+          height: 21px;
+          border-radius: 4px;
+          background: linear-gradient(
+            90deg,
+            var(--neutral-200) 25%,
+            var(--neutral-100) 50%,
+            var(--neutral-200) 75%
+          );
+          background-size: 200% 100%;
+          animation: shimmer var(--skeleton-duration) infinite linear;
+
+          & + .contact {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -200% 0;
+  }
+
+  to {
+    background-position: 200% 0;
+  }
+}
