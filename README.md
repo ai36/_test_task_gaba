@@ -1,6 +1,6 @@
 # test-task
 
-Проект на базе React + TypeScript.
+Проект на базе React + TypeScript. [Live demo](https://test-task-gaba.vercel.app/)
 
 ## Стек
 
