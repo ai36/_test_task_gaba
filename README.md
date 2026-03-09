@@ -1,12 +1,14 @@
 # test-task
 
-Проект на базе Vite + React + TypeScript.
+Проект на базе React + TypeScript.
 
 ## Стек
 
 - React 19
 - TypeScript 5
 - Vite 7
+- Zustand
+- Axios
 - ESLint
 
 ## Установка зависимостей
@@ -42,14 +44,3 @@ npm run preview
 ```bash
 npm run lint
 ```
-
-## Структура проекта
-
-```
-src/
-  assets/       — статичные ресурсы (изображения, шрифты)
-  styles/       — глобальные стили
-  App.tsx       — корневой компонент
-  main.tsx      — точка входа
-```
-
